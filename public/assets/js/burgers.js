@@ -1,6 +1,11 @@
+// The list for devoured items
 var listDevoured
 
+
+
+//Adds a burger
 function addBurger(event) {
+    //prevents the DOM from the default response
     event.preventDefault();
     var newBurger = {
         burger_name: $("#name").val(),
@@ -17,6 +22,9 @@ function addBurger(event) {
     );
 }
 
+
+
+//Devoured burgers
 function devourBurger(event) {
     var id = $(this).data("id");
 

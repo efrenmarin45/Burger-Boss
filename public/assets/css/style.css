@@ -4,6 +4,8 @@ body {
   background-color: burlywood;
 }
 
+
+/* Background Image */
 .bg-img {
   margin: 0;
   padding: 0;
@@ -18,11 +20,14 @@ body {
   z-index: -99999;
 }
 
+
+/* Burger image */
 #mainImage {
   filter: none;
   border: 5px solid white;
   border-radius: 25px;
 }
+
 header {
   margin: 0 auto;
   display: block;
@@ -33,14 +38,6 @@ header {
 
 img {
   height: 300px;
-}
-
-.icon {
-  height: 24px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-  top: 5px;
 }
 
 .container {
@@ -104,6 +101,8 @@ img {
   color: white;
 }
 
+
+/* Submit button */
 #burger-submit {
   background-color: #2e912e;
   color: white;
