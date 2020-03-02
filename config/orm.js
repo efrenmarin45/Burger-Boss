@@ -1,5 +1,9 @@
+// Importing the connection file
 var connection = require("./connection.js");
 
+
+
+//Sets a blank array and pushes user input into it
 function printQuestionMarks(num) {
     var arr = [];
   
@@ -11,7 +15,10 @@ function printQuestionMarks(num) {
 }
 
 
+
+//Set up ORM variable
 var orm = {
+    //This function selects 'all' from the DB table burgers
     all: function(tableInput, cb) {
         var queryString = "SELECT * FROM ?? ;";
         connection.query(queryString, [tableInput], function (err, res) {
@@ -21,6 +28,7 @@ var orm = {
             cb(res);
         });
     },
+    //This function inserts user inpute into the DB table burgers
     create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
         queryString += " (";
@@ -39,6 +47,7 @@ var orm = {
             cb(res);
         })
     },
+    //This function updates the table based on user input
     update: function(table, id, cb) {
         var queryString = "UPDATE " + table;
         queryString += " SET ";
@@ -57,4 +66,7 @@ var orm = {
     }
 };
 
+
+
+//Exports the ORM for our app to use
 module.exports = orm;
