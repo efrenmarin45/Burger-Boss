@@ -1,7 +1,8 @@
+// Requiring our dependencies
 var express = require("express");
 
+// Setting up port for server
 var PORT = process.env.PORT || 8080;
-
 var app = express();
 
 app.use(express.static("public"));
@@ -10,6 +11,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
+// Requiring handlebars
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));

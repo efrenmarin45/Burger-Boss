@@ -3,6 +3,9 @@
     <h1 style="font-weight: bold; text-shadow: 2px 1px white">Burger Boss</h1>
 </header>
 
+
+
+{{!-- Container for pending burgers to be eaten --}}
 <div class="container">
 <div class="display-burgers">
 <ul>
@@ -13,6 +16,7 @@
     {{/each}}
 </ul>
 </div>
+{{!-- Burgers that have been eaten already --}}
 {{#if hasDevouredBurgers}}
 <div class="devoured-burgers">
 <ul>
@@ -27,6 +31,8 @@
 </div>
 
 
+
+{{!-- Input box and submit button --}}
 <form class="new-burger">
     <p style="font-weight: bold; text-shadow: 1px 3px black" >Enter the name of the burger you'd like to order:</p>
     <div class="form-group">
