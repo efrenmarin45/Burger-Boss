@@ -1,37 +1,37 @@
-<h1 class="title d-flex justify-content-center">Burger Boss</h1>
+<header>
+    <img id="mainImage" src="/assets/img/burger.png" alt="cheeseburger">
+    <h1 style="font-weight: bold; text-shadow: 2px 1px white">Burger Boss</h1>
+</header>
 
-<h2>Devoured Orders</h2>
-
+<div class="container">
+<div class="display-burgers">
 <ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{> burger-block devoured=false}}
+        {{/unless}}
+    {{/each}}
 </ul>
-
-<h2>Ready to Eat!</h2>
-
+</div>
+{{#if hasDevouredBurgers}}
+<div class="devoured-burgers">
 <ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burger-block devoured=true}}
+        {{/if}}
+    {{/each}}
 </ul>
+</div>
+{{/if}}
+</div>
 
-<h2>Order Here:</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Place Order:</label>
-    <input type="text" id="ca" name="name" placeholder="Big Mac, Fatburger, Whopper" >
-  </div>
-
-  <div class="form-group">
-    <label for="devoured">Confirm Order</label>
-    <input class="larger" type="checkbox" name="devoured" value="1">
-  </div>
-
-  <button type="submit">Submit Order</button>
+<form class="new-burger">
+    <p style="font-weight: bold; text-shadow: 1px 3px black" >Enter the name of the burger you'd like to order:</p>
+    <div class="form-group">
+        <input type="text" id="name" name="burger-name">
+    </div>
+    <br>
+    <button type="submit" id="burger-submit">Submit</button>
 </form>

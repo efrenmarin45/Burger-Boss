@@ -1,174 +1,115 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    height: 100%;
-    margin: -10px;
-    background-color: black;
-  }
-  
-  h1 {
-    color: whitesmoke;
-  }
-  
-  h2{
-    font-family: 'Poiret One', cursive;
-    font-size:20pt;
-  
-  
-    color:#FF530D;
-  
-  }
-  
-  button.align-items-end.change-order {
-    margin: 5px 15px;
-  }
-  
-  .larger {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .bg-img {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url(https://images.unsplash.com/photo-1477617722074-45613a51bf6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=800);
-    background-size: cover;
-    filter: blur(15px);
-    -webkit-filter: blur(15px);
-    z-index: -99999;
-  }
-  
-  .container {
-    max-width: 450px;
-    margin: 50px auto;
-    padding: 25px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  .title {
-    text-align: center;
-    margin-top: -15px;
-  }
-  
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  li {
-    min-width: 350px;
-    padding: 5px;
-    margin: 5px;
-    background: rgba(250,235,215,.5);
-    list-style-type: none;
-  }
-  
-  input {
-    width: 300px;
-    height: 20px;
-    margin: 0 0 15px;
-  }
-  
-  button {
-    padding: 5px;
-  }
-  
-  label {
-    font-weight: bold;
-    font-family: 'Poiret One', cursive;
-    font-size: 14pt;
-    color: #FF530D;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
-  /* Burger SVG Image */
-  #topb{
-    animation:falldown7 2s;
-    animation-delay:0s;
-  }
-  
-  #onion{
-    animation:falldown6 2s;
-    animation-delay:0s;
-  }
-  
-  #tomato{
-    animation:falldown5 2s;
-    animation-delay:0s;
-  }
-  
-  #letus{
-    animation:falldown4 1.75s;
-    animation-delay:0s;
-  }
-  
-  #cheese{
-    animation:falldown3 1.5s;
-    animation-delay:0s;
-  }
-  
-  #meat{
-    animation:falldown2 1.25s;
-    animation-delay:0s;
-  }
-  
-  #bottomb{
-  
-    animation:falldown1 1s;
-    animation-delay:0s; 
-  }
-  
-  @keyframes falldown1{
-    0%{transform:translateY(-800px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
-  
-  @keyframes falldown2{
-    0%{transform:translateY(-1000px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
-    
-  @keyframes falldown3{
-    0%{transform:translateY(-1200px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
-  
-  @keyframes falldown4{
-    0%{transform:translateY(-1400px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
-  
-  @keyframes falldown5{
-    0%{transform:translateY(-1600px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
-  
-  @keyframes falldown6{
-    0%{transform:translateY(-1800px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
-  
-  @keyframes falldown7{
-    0%{transform:translateY(-2000px);}
-    70%{transform:translateY(0px);}
-    100%{transform:translateX(0px);}
-    }
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d83939;
+  background-color: burlywood;
+}
+
+.bg-img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/burger_wallpaper.png");
+  background-repeat: repeat;
+  background-size: cover;
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
+  z-index: -99999;
+}
+
+#mainImage {
+  filter: none;
+  border: 5px solid white;
+  border-radius: 25px;
+}
+header {
+  margin: 0 auto;
+  display: block;
+  align-content: center;
+  text-align: center;
+  font-family: 'Fredoka One';
+}
+
+img {
+  height: 300px;
+}
+
+.icon {
+  height: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.display-burgers, .devoured-burgers{
+  background-color: rgb(255, 255, 255, 0.3);
+  grid-column: span 3;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.display-burgers button {
+  background-color: #d83939;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.75em;
+  padding: 10px;
+}
+
+.display-burgers li {
+  color: #191919;
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.new-burger {
+  padding-top: 100px;
+  display: block;
+  align-content: center;
+  text-align: center;
+}
+
+.new-burger input {
+  height: 6em;
+  width: 20em;
+}
+
+.devoured-burgers li {
+  list-style: none;
+  color: #191919;
+}
+
+.devoured-burgers button {
+  background-color: rgb(255, 204, 122, 0.3);
+  border: none;
+  color: #d83939;
+  font-weight: bold;
+}
+
+.new-burger p {
+  color: white;
+}
+
+#burger-submit {
+  background-color: #2e912e;
+  color: white;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 1em;
+  text-transform: uppercase;
+}
