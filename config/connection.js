@@ -1,7 +1,7 @@
 // Setting up MySQL connection
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
     host: "us-cdbr-iron-east-04.cleardb.net",
     port: 3306,
     user: "be39954d6a60d9",
